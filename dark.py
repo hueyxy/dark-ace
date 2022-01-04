@@ -1,8 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sat Sep 11 00:16:07 2021
-@author: xiuzhang
-"""
 
 import sys
 import cv2
@@ -98,7 +94,7 @@ if __name__ == '__main__':
     J = Recover(I, t, A, 0.1)
 
     arr = np.hstack((I, J))
-    #cv2.imshow("contrast", arr)
-    #cv2.imwrite("car-02-dehaze.png", J * 255)
-    cv2.imwrite("./dark_result/test13-02-contrast.png", arr * 255)
+    cv2.imshow("contrast", arr)
+    cv2.imwrite("car-02-dehaze.png", J * 255)
+    cv2.imwrite("test-02-contrast.png", arr * 255)
     cv2.waitKey()

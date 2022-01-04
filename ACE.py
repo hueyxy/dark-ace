@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-# By:Eastmount CSDN 2021-03-12
-# 惨zmshy2128老师文章并修改成Python3代码
 import os.path
 
 import cv2
@@ -106,8 +104,6 @@ def zmIceColor(I, ratio=4, radius=3):
 
 # 主函数
 if __name__ == '__main__':
-    for root, dirs, images in os.walk('P4.png'):
-        for im in tqdm(images):
-            img = cv2.imread(os.path.join(root + im))
-            res = zmIceColor(img / 255.0) * 255
-            cv2.imwrite('./result/' + im, res)
+    img = cv2.imread(os.path.join('./....'))
+    res = zmIceColor(img / 255.0) * 255
+    cv2.imwrite('test-clr.png', res)
